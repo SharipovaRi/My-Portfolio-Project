@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors({origin: "https://rita-sharipova-portfolio.up.railway.app",
-methods: ["GET", "POST", "OPTIONS"]})),
+methods: ["GET", "POST", "OPTIONS"]}));
 
 app.use(express.json());
 app.options("/send", cors()); 
@@ -30,6 +30,9 @@ app.post("/send", async (req, res) => {
   }
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
