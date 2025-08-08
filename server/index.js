@@ -4,7 +4,7 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(cors({origin: "rita-sharipova-portfolio.up.railway.app"}));
 app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
