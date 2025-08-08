@@ -4,20 +4,41 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
 
+const allowedOrigins = [
+  "https://https://back-portfolio-project-production.up.railway.app",
+  "http://localhost:3000",
+  "https://healthcheck.railway.app"
+];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.warn("CORS blocked origin:", origin);
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.json());
-
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
+  console.log("Received form:", { name, email, message });
 
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: process.env.EMAIL_TO, 
+      to: process.env.EMAIL_TO,
       subject: `New message from ${name}`,
       text: `From: ${name} <${email}>\n\n${message}`,
     });
@@ -40,5 +61,3 @@ setTimeout(() => {
     console.log(`Backend running on http://0.0.0.0:${PORT}`);
   });
 }, 2000);
-
-
