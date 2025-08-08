@@ -7,7 +7,6 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
-app.options("/send", cors()); 
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
