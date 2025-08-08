@@ -4,10 +4,28 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = [
+  "http://localhost:5173",              
+  "https://rita-sharipova-portfolio.up.railway.app" 
+];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    // allow requests with no origin (e.g. Postman or curl)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ['POST', 'GET'],
+  credentials: true,
+}));
 
 app.use(express.json());
-
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -33,11 +51,14 @@ app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
 
+
+app.use((err, req, res, next) => {
+  console.error("Unhandled error:", err);
+  res.status(500).json({ message: "Internal server error." });
+});
+
 const PORT = process.env.PORT || 5000;
 
-setTimeout(() => {
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Backend running on http://0.0.0.0:${PORT}`);
-  });
-}, 2000);
-
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Backend running on http://0.0.0.0:${PORT}`);
+});
