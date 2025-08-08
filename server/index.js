@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 
 const allowedOrigins = [
-  "https://https://back-portfolio-project-production.up.railway.app",
+  "https://back-portfolio-project-production.up.railway.app",
   "http://localhost:3000",
   "https://healthcheck.railway.app"
 ];
