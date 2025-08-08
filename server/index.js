@@ -21,7 +21,7 @@ app.post("/send", async (req, res) => {
       from: 'onboarding@resend.dev',
       to: process.env.EMAIL_TO, 
       subject: `New message from ${name}`,
-      text: `From: ${name} <${email}>\n\n${message}`,
+      text: `From: ${name} <${email}>\n\n\n${message}`,
     });
 
     res.status(200).json({ message: "Message sent successfully!" });
