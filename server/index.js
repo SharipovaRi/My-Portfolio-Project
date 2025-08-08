@@ -4,7 +4,7 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
-app.use(cors({origin: "https://rita-sharipova-portfolio.up.railway.app"}));
+app.use(cors({origin: ["https://rita-sharipova-portfolio.up.railway.app", "http://localhost:5173"]}));
 app.use(express.json());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -28,7 +28,7 @@ app.post("/send", async (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Backend running on http://localhost:${PORT}`);
 });
