@@ -4,6 +4,7 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
+
 app.use(cors());
 app.options("*", cors());
 
@@ -12,6 +13,7 @@ app.use(express.json());
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/send", async (req, res) => {
+  console.log("Received contact form:", req.body);
   const { name, email, message } = req.body;
 
   try {
@@ -35,10 +37,6 @@ app.get("/health", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-setTimeout(() => {
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Backend running on http://0.0.0.0:${PORT}`);
-  });
-}, 2000);
-
-console.log("PORT env variable:", process.env.PORT);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Backend running on http://0.0.0.0:${PORT}`);
+});
