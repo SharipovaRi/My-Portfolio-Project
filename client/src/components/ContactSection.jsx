@@ -24,7 +24,7 @@ export const ContactSection = () => {
     setStatus("");
 
     try {
-      const res = await fetch("https://back-portfolio-project-production.up.railway.app/#contact", {
+      const res = await fetch("https://back-portfolio-project-production.up.railway.app/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
