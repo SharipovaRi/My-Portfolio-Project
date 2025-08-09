@@ -9,11 +9,11 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const corsOptions = {
   origin: "https://rita-sharipova-portfolio.up.railway.app", 
   methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type"],
+  allowedHeaders: "*",
 };
 
+app.use(cors(corsOptions));
 app.use(express.json());
-app.options("/send", cors(corsOptions)); 
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
