@@ -13,8 +13,13 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
 app.use(express.json());
+
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
+app.options("*", cors(corsOptions));
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
@@ -34,9 +39,6 @@ app.post("/send", async (req, res) => {
   }
 });
 
-app.get("/health", (req, res) => {
-  res.status(200).send("OK");
-});
 
 const PORT = process.env.PORT || 5000;
 
