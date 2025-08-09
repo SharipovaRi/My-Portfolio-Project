@@ -4,18 +4,16 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
+const resend = new Resend(process.env.RESEND_API_KEY);
+
 const corsOptions = {
   origin: "https://rita-sharipova-portfolio.up.railway.app", 
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 };
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
 
 app.use(express.json());
-
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+app.options("/send", cors(corsOptions)); 
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
