@@ -7,12 +7,13 @@ const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const corsOptions = {
-  origin: "https://rita-sharipova-portfolio.up.railway.app", 
+  origin: ["http://localhost:5173","https://rita-sharipova-portfolio.up.railway.app"], 
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: "*",
 };
 
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
