@@ -5,27 +5,31 @@ require("dotenv").config();
 
 const app = express();
 
+
 const allowedOrigins = [
-  "http://localhost:5173",              
-  "https://rita-sharipova-portfolio.up.railway.app" 
+  "http://localhost:5173",
+  "https://rita-sharipova-portfolio.up.railway.app"
 ];
 
-app.use(cors({
-  origin: function(origin, callback) {
-    // allow requests with no origin (e.g. Postman or curl)
-    if (!origin) return callback(null, true);
 
-    if (allowedOrigins.indexOf(origin) !== -1) {
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  methods: ['POST', 'GET'],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type'],
   credentials: true,
 }));
 
+
 app.use(express.json());
+
+
+app.options('*', cors());
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -35,7 +39,7 @@ app.post("/send", async (req, res) => {
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: process.env.EMAIL_TO, 
+      to: process.env.EMAIL_TO,
       subject: `New message from ${name}`,
       text: `From: ${name} <${email}>\n\n${message}`,
     });
@@ -56,6 +60,7 @@ app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ message: "Internal server error." });
 });
+
 
 const PORT = process.env.PORT || 5000;
 
