@@ -36,7 +36,7 @@ export const AboutSection = () => {
                             <div className="p-3 rounded-full bg-primary/10">
                                 <Code className="h-6 w-6"/>
                             </div>
-                            <div className="grid grid-cols-3 xs:grid-cols-2 gap-x-5 text-left">
+                            <div className="grid grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3 text-left">
                                 <h4 className="font-semibold"> Python </h4>
                                 <h4 className="font-semibold"> Java </h4>
                                 <h4 className="font-semibold"> C </h4>
