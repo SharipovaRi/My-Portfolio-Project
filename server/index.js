@@ -7,9 +7,9 @@ const app = express();
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const corsOptions = {
-  origin: ["http://localhost:5173","https://rita-sharipova-portfolio.up.railway.app"], 
+  origin: "https://rita-sharipova-portfolio.up.railway.app", 
   methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: "*",
+  allowedHeaders: ["Content-Type"],
 };
 
 app.use(cors(corsOptions));
@@ -19,7 +19,7 @@ app.get("/health", (req, res) => {
   res.status(200).send("OK");
 });
 
-app.options("*", cors(corsOptions));
+app.options("/send", cors(corsOptions)); 
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
@@ -38,7 +38,6 @@ app.post("/send", async (req, res) => {
     res.status(500).json({ message: "Failed to send message." });
   }
 });
-
 
 const PORT = process.env.PORT || 5000;
 
