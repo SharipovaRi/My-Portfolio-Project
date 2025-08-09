@@ -4,7 +4,13 @@ const { Resend } = require('resend');
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: "https://rita-sharipova-portfolio.up.railway.app", 
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 
@@ -35,8 +41,7 @@ app.get("/health", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-setTimeout(() => {
-  app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Backend running on http://0.0.0.0:${PORT}`);
-  });
-}, 2000);
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Backend running on http://0.0.0.0:${PORT}`);
+});
