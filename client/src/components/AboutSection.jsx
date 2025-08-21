@@ -13,19 +13,19 @@ export const AboutSection = () => {
                     <h3 className="text-2xl font-bold">Education</h3>
                     <div className="space-y-3">
                         <h4 className="text-muted-foreground font-bold">Master of Science in Computer Science </h4>
-                        <p className="text-muted-foreground"> University of South Florida | May 2027</p>
-                    </div>
-                    <div className="space-y-3">
-                        <h4 className="text-muted-foreground font-bold">Associate of Science in Computer Programming and Analysis (Software Development)</h4>
-                        <p className="text-muted-foreground"> Valencia College | July 2025</p>
+                        <p className="text-muted-foreground"> University of South Florida </p>
                     </div>
                     <div className="space-y-3">
                         <h4 className="text-muted-foreground font-bold">Pathway to Computing Graduate Certificate</h4>
-                        <p className="text-muted-foreground"> University of South Florida | May 2025</p>
+                        <p className="text-muted-foreground"> University of South Florida </p>
+                    </div>
+                    <div className="space-y-3">
+                        <h4 className="text-muted-foreground font-bold">Associate of Science in Computer Programming and Analysis (Software Development)</h4>
+                        <p className="text-muted-foreground"> Valencia College </p>
                     </div>
                     <div className="space-y-3">
                         <h4 className="text-muted-foreground font-bold">Bachelor of Science in Hospitality Management</h4>
-                        <p className="text-muted-foreground"> University of Central Florida (Rosen College of Hospitality Management) | May 2022</p>
+                        <p className="text-muted-foreground"> University of Central Florida (Rosen College of Hospitality Management) </p>
                     </div>
                 </div>
                 
