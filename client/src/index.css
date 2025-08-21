@@ -33,7 +33,7 @@
     --background: 210 40% 95%;
     --foreground: 222 47% 15%;
 
-    --card: 210 40% 95%;
+    --card: 0 0% 100%;
 
     --primary: 250 47% 70%;
     --primary-foreground: 210 40% 95%;
@@ -45,7 +45,7 @@
     --background: 222 47% 5%;
     --foreground: 213 31% 91%;
 
-    --card: 222 47% 5%;
+    --card: 222 47% 8%;
 
     --primary: 250 65% 60%;
     --primary-foreground: 213 31% 91%;
