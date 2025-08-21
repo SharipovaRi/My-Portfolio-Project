@@ -8,8 +8,7 @@ const projects = [
     description: "Developed the backend for a personalized meal planning website that generates custom meal plans based on user-defined criteria. The project was built using Java (Spring Boot), H2 database, React, TypeScript, and other technologies.",
     image: "/projects/Picture1.png",
     tags: ["Java", "H2", "Spring Boot", "REST API"],
-    githubURL:"https://github.com/joaovictorbarrera/MunchMatch.git",
-    projectURL: "https://munchmatch-production.up.railway.app",
+    githubURL:"https://github.com/joaovictorbarrera/MunchMatch.git"
 }
 ]
 
@@ -41,9 +40,6 @@ export const ProjectsSection = () =>{
                     <div className="flex justify-between items-center"> 
                         <div className="flex space-x-3">
                            
-                            <a href={project.projectURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <ExternalLink size={20} /> 
-                            </a>
-                            
                             <a href={project.githubURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <Github size={20} /> 
                             </a>
                         </div>
