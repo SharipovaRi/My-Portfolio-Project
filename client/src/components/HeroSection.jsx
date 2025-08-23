@@ -1,4 +1,4 @@
-import { CircleArrowDown } from "lucide-react"
+import { ChevronDown, CircleArrowDown } from "lucide-react"
 
 export const HeroSection = () => {
     return <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center px-4">
@@ -25,7 +25,7 @@ export const HeroSection = () => {
             <span className="text-sm text-muted-foreground mb-2">
                 Scroll
             </span>
-            <CircleArrowDown className="h-5 w-5 text-primary" />
+            <ChevronDown className="h-5 w-5 text-primary" />
 
            
         </div>

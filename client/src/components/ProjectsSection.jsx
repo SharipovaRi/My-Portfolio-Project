@@ -1,4 +1,4 @@
-import { Github, ExternalLink, CircleArrowRight } from "lucide-react";
+import { Github, ExternalLink, CircleArrowRight, ChevronRight } from "lucide-react";
 
 const projects = [
 {
@@ -53,7 +53,7 @@ export const ProjectsSection = () =>{
             <a className="button w-fit flex items-center mx-auto gap-2" 
             target="blank"
             href="https://github.com/SharipovaRi">
-                Check my GitHub <CircleArrowRight size={16}/>
+                Check my GitHub <ChevronRight size={16}/>
             </a>
         </div>
 
