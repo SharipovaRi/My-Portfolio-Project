@@ -35,7 +35,37 @@ export const ExperienceSection = () => {
                 <div className="grid grid-cols-1 gap-3">
                 <h3 className="text-2xl font-bold"> Work Experience </h3>
                 
-                            
+                <div className="gradient-border p-6 card-hover">
+                    <div className="flex flex-col gap-4">
+                        <div className="text-muted-foreground font-bold">
+                            <h2>Bellini College Graduate Student Ambassador at University of South Florida</h2>  
+                        </div>
+                    
+                    <button
+                    onClick={()=> toggleDetail('three')}
+                    className="self-center px-2 py-1 text-xs font-medium border rounded-md bg-secondary text-secondary-foreground">
+                    {showDetails.three ? "Hide Info":"More Info"}
+                    </button>    
+
+                    {showDetails.three && (
+                        <div className="text-sm text-secondary">
+                            <ul className="list-disc list-inside text-sm text-secondary space-y-2 text-left">
+                                <li>
+                                    Represented Bellini College of Artificial Intelligence, Cybersecurity, and Computing to prospective and current graduate students, providing clear guidance on academic programs, campus resources, and student life. 
+                                </li>
+                                <li>
+                                    Delivered responsive, professional support during orientations, campus events, and community-building activities, helping students understand academic expectations and available support services. 
+                                </li>
+                                <li>
+                                    Communicated regularly with diverse audiences in one-on-one and group settings, answering questions clearly and professionally. 
+                                </li>
+                            </ul>
+                        </div>
+                    )}
+                    
+                    </div>
+                </div> 
+
                 <div className="gradient-border p-6 card-hover">
                     <div className="flex flex-col gap-4">
                         <div className="text-muted-foreground font-bold">
@@ -52,13 +82,14 @@ export const ExperienceSection = () => {
                             <div className="text-sm text-secondary">
                                 <ul className="list-disc list-inside text-sm text-secondary space-y-2 text-left">
                                 <li>
-                                    Provided tutoring and support to students in Python, C, and Java, assisting with programming concepts, debugging, and mastering foundational coding principles in-person and online.
+                                    Provided tutoring and support to students in Python, C, and Java by reviewing code, identifying logical errors, and explaining programming concepts clearly in both in-person and online settings, while focusing on fundamental programming principles to build a strong foundation. 
+
                                 </li>
                                 <li>
-                                    Assisted 10+ faculty members with software setup, troubleshooting, and classroom technology needs across Windows and Mac environments.
+                                    Assisted 10+ faculty members with software setup, troubleshooting, and classroom technology needs across Windows and  macOS environments to support effective course delivery and minimize technical disruptions during class and lab sessions. 
                                 </li>
                                 <li>
-                                    Performed maintenance checks on 100+ computers to ensure optimal performance and software updates.
+                                    Maintained accurate records and performed routine maintenance checks on 100+ computers to ensure consistency, reliability, and compliance with system requirements. 
                                 </li>
                                 </ul>
                             </div>
@@ -84,7 +115,7 @@ export const ExperienceSection = () => {
                         <div className="text-sm text-secondary">
                             <ul className="list-disc list-inside text-sm text-secondary space-y-2 text-left">
                                <li>
-                                    Supervised front-desk operations for a 120+ room hotel, maintaining a high positive guest feedback rate by addressing inquiries, resolving concerns, and ensuring a seamless guest experience.
+                                    Supervised front-desk operations for a 120+ room hotel, maintaining a positive guest experience by addressing inquiries, resolving concerns, and ensuring smooth operations in a fast-paced, high-volume environment. 
                                 </li>
                                 <li>
                                     Led and coached a 15+ member team, holding daily briefings and providing individual mentorship to enhance team performance and promote company values.
@@ -96,7 +127,7 @@ export const ExperienceSection = () => {
                                     Actively assisted in conducting hiring sessions and new hire training for over 10+ people, helping them quickly adapt to responsibilities and successfully integrate into the team.
                                 </li>
                                 <li>
-                                    Managed weekly inventory control, ordering, and staff scheduling for Food & Beverage and Front Desk departments.
+                                    Managed scheduling, inventory tracking, and documentation for front desk and food & beverage operations, ensuring deadlines, records, and operational data were accurate, organized, and kept up to date. 
                                 </li>   
                             </ul>
                         </div>
@@ -164,7 +195,7 @@ export const ExperienceSection = () => {
 
                     {showDetails.four && (
                         <div className="text-sm text-secondary">
-                            <p> Planned and coordinated 10+ IT related events, workshops, and guest speaker sessions to support the club's goals and significantly increased member commitment. 
+                            <p> Planned and coordinated 10+ IT-related events, workshops, and guest speaker sessions, ensuring smooth execution and helping members engage effectively with technical content. Encouraged participation and guided club members during events, reinforcing understanding of programming concepts and fostering a collaborative learning environment. 
                             </p>
                         </div>
                     )}
@@ -187,7 +218,7 @@ export const ExperienceSection = () => {
 
                     {showDetails.five && (
                         <div className="text-sm text-secondary">
-                            <p> Managed the organization's budget and planned 10+ events to increase engagement and member participation. Additionally, lead the club's social media accounts (Facebook and Instagram).
+                            <p> Managed the organization’s budget and coordinated 10+ events, including workshops and guest speaker sessions, guiding members and connecting them with hospitality industry professionals. Created and managed social media content on Instagram and Facebook to share event information, industry insights, and professional opportunities, keeping members engaged and informed. 
                             </p>
                         </div>
                     )}
@@ -208,7 +239,7 @@ export const ExperienceSection = () => {
 
                     {showDetails.six && (
                         <div className="text-sm text-secondary">
-                            <p> Worked collaboratively to design and implement events that promoted student involvement and community at Rosen.
+                            <p> Worked as part of the Rosen Life student team, collaborating with peers in different roles to plan and execute events that promoted student involvement, engagement, and community on campus. Communicated with students to gather feedback, share information, and ensure events met participants' needs while building connections across the campus community. 
                             </p>
                         </div>
                     )}

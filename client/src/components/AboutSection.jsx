@@ -12,7 +12,7 @@ export const AboutSection = () => {
                 <div className="space-y-8">
                     <h3 className="text-2xl font-bold">Education</h3>
                     <div className="space-y-3">
-                        <h4 className="text-muted-foreground font-bold">Master of Science in Computer Science </h4>
+                        <h4 className="text-muted-foreground font-bold">Master of Science in Artificial Intelligence and Business Analytics </h4>
                         <p className="text-muted-foreground"> University of South Florida </p>
                     </div>
                     <div className="space-y-3">
@@ -43,7 +43,12 @@ export const AboutSection = () => {
                                 <h4 className="font-semibold"> HTML </h4>
                                 <h4 className="font-semibold"> CSS </h4>
                                 <h4 className="font-semibold"> JavaScript</h4>
-                                <h4 className="font-semibold"> MySQL </h4>     
+                                <h4 className="font-semibold"> MySQL </h4> 
+                                <h4 className="font-semibold"> React </h4>  
+                                <h4 className="font-semibold"> Vite </h4>     
+                                <h4 className="font-semibold"> Node.js </h4>   
+                                <h4 className="font-semibold"> PostgreSQL </h4> 
+                                <h4 className="font-semibold"> Git </h4>        
                             </div>
                         </div>
                     </div>
@@ -53,9 +58,11 @@ export const AboutSection = () => {
                                 <BookOpenText className="h-6 w-6"/>
                             </div>
                             <div className="text-left">
-                                <h4 className="font-semibold">Data Structures and Algorithms</h4>
+                                <h4 className="font-semibold">Business Statistics</h4>
+                                <h4 className="font-semibold">Advanced Database Management</h4>
+                                <h4 className="font-semibold">Machine Learning</h4>
                                 <h4 className="font-semibold">Introduction to Artificial Intelligence</h4>
-                                <h4 className="font-semibold">Operating Systems</h4>
+                                <h4 className="font-semibold">Data Structures and Algorithms</h4>
                             </div>
                         </div>
                     </div>
