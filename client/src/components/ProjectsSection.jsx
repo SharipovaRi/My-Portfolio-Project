@@ -52,8 +52,16 @@ export const ProjectsSection = () =>{
                            
                             <a href={project.githubURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <Github size={20} /> 
                             </a>
-                            <a href={project.websiteURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <ExternalLink size={20} /> 
+                            {project.websiteURL && (
+                            <a
+                                href={project.websiteURL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                            >
+                                <Globe size={20} />
                             </a>
+                        )}
                         </div>
                     </div>
                 </div>
