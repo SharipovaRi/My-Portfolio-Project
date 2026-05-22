@@ -4,6 +4,16 @@ const projects = [
 {
     /* Project 1*/
     id: 1,
+    title: "E-Commerce Website Review Prediction System",
+    description: "End-to-end Machine Learning system that predicts customer review ratings (1-5 ratings) and identifies dissatisfaction risk based on both review text and structured e-commerce data. The system is designed with a modular ML pipeline separating data processing, model training, and deployment components, making it suitable as a production-style ML application.",
+    image: "/projects/Picture2.png",
+    tags: ["Python", "Fast API", "Docker", "Streamlit",  "GitHub Actions", "Pytest"],
+    githubURL:"https://github.com/SharipovaRi/ecommerce_review_prediction_system",
+    websiteURL: "https://e-commerce-review-prediction-system.up.railway.app/" 
+},
+{
+    /* Project 2*/
+    id: 2,
     title: "MunchMatch",
     description: "Developed the backend for a personalized meal planning website that generates custom meal plans based on user-defined criteria. The project was built using Java (Spring Boot), H2 database, React, TypeScript, and other technologies.",
     image: "/projects/Picture1.png",
@@ -41,6 +51,8 @@ export const ProjectsSection = () =>{
                         <div className="flex space-x-3">
                            
                             <a href={project.githubURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <Github size={20} /> 
+                            </a>
+                            <a href={project.websiteURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <Globe size={20} /> 
                             </a>
                         </div>
                     </div>

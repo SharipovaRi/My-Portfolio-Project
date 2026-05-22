@@ -38,16 +38,17 @@ export const AboutSection = () => {
                             </div>
                             <div className="grid grid-cols-3 xs:grid-cols-2 grid-cols-1 gap-3 text-left">
                                 <h4 className="font-semibold"> Python </h4>
+                                <h4 className="font-semibold"> R </h4>
                                 <h4 className="font-semibold"> Java </h4>
                                 <h4 className="font-semibold"> C </h4>
                                 <h4 className="font-semibold"> HTML </h4>
                                 <h4 className="font-semibold"> CSS </h4>
                                 <h4 className="font-semibold"> JavaScript</h4>
                                 <h4 className="font-semibold"> MySQL </h4> 
+                                <h4 className="font-semibold"> PostgreSQL </h4>
                                 <h4 className="font-semibold"> React </h4>  
                                 <h4 className="font-semibold"> Vite </h4>     
                                 <h4 className="font-semibold"> Node.js </h4>   
-                                <h4 className="font-semibold"> PostgreSQL </h4> 
                                 <h4 className="font-semibold"> Git </h4>        
                             </div>
                         </div>
