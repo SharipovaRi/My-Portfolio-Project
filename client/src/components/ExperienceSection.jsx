@@ -42,12 +42,12 @@ export const ExperienceSection = () => {
                         </div>
                     
                     <button
-                    onClick={()=> toggleDetail('three')}
+                    onClick={()=> toggleDetail('four')}
                     className="self-center px-2 py-1 text-xs font-medium border rounded-md bg-secondary text-secondary-foreground">
-                    {showDetails.three ? "Hide Info":"More Info"}
+                    {showDetails.four ? "Hide Info":"More Info"}
                     </button>    
 
-                    {showDetails.three && (
+                    {showDetails.four && (
                         <div className="text-sm text-secondary">
                             <ul className="list-disc list-inside text-sm text-secondary space-y-2 text-left">
                                 <li>
