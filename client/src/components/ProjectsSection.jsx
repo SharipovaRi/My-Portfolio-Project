@@ -5,9 +5,9 @@ const projects = [
     /* Project 1*/
     id: 1,
     title: "E-Commerce Website Review Prediction System",
-    description: "End-to-end Machine Learning system that predicts customer review ratings (1-5 ratings) and identifies dissatisfaction risk based on both review text and structured e-commerce data. The system is designed with a modular ML pipeline separating data processing, model training, and deployment components, making it suitable as a production-style ML application.",
+    description: "End-to-end Machine Learning system that predicts customer review ratings (1-5 ratings) and identifies dissatisfaction risk based on both review text and structured e-commerce data.",
     image: "/projects/Picture2.png",
-    tags: ["Python", "Fast API", "Docker", "Streamlit",  "GitHub Actions", "Pytest"],
+    tags: ["Python", "Fast API", "Docker", "Streamlit", "GitHub Actions", "Pytest"],
     githubURL:"https://github.com/SharipovaRi/ecommerce_review_prediction_system",
     websiteURL: "https://e-commerce-review-prediction-system.up.railway.app/" 
 },
