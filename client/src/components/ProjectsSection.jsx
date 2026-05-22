@@ -32,40 +32,56 @@ export const ProjectsSection = () =>{
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
             {projects.map((project, key) => (
-                <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
                     <div className="h-48 overflow-hidden ">
                         <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-500 scale-107  translate-x-2 group-hover:scale-115"/>
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 flex flex-col flex-grow">
                         <div className="flex flex-wrap gap-2 mb-4">
-                            {project.tags.map((tag) =>(
-                                <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground ">
-                                    {tag}
-                                </span>
+                            {project.tags.map((tag, index) => (
+                            <span
+                                key={index}
+                                className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                            >
+                                {tag}
+                            </span>
                             ))}
                         </div>
-                    
-                    <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                    <div className="flex justify-between items-center"> 
-                        <div className="flex space-x-3">
-                           
-                            <a href={project.githubURL} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300" > <Github size={20} /> 
-                            </a>
-                            {project.websiteURL && (
-                            <a
-                                href={project.websiteURL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                            >
-                                <ExternalLink size={20} />
-                            </a>
-                        )}
-                        </div>
+
+                        <h3 className="text-xl font-semibold mb-1">
+                            {project.title}
+                        </h3>
+
+                        <p className="text-muted-foreground text-sm mb-4">
+                            {project.description}
+                        </p>
+                    <div className="flex justify-between items-center mt-auto">
+                    <div className="flex space-x-3">
+
+                    <a
+                        href={project.githubURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    >
+                        <Github size={20} />
+                    </a>
+
+                    {project.websiteURL && (
+                        <a
+                        href={project.websiteURL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        >
+                        <ExternalLink size={20} />
+                        </a>
+                    )}
+
                     </div>
                 </div>
                 </div>
+            </div>
             ))}
         </div>
 
