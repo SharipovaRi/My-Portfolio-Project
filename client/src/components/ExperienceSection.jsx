@@ -6,6 +6,7 @@ import { useState } from "react";
 export const ExperienceSection = () => {
 
     const [showDetails, setShowDetails] = useState({
+        zero: false,
         one: false,
         two: false,
         three: false,
@@ -42,12 +43,12 @@ export const ExperienceSection = () => {
                         </div>
                     
                     <button
-                    onClick={()=> toggleDetail('four')}
+                    onClick={()=> toggleDetail('zero')}
                     className="self-center px-2 py-1 text-xs font-medium border rounded-md bg-secondary text-secondary-foreground">
-                    {showDetails.four ? "Hide Info":"More Info"}
+                    {showDetails.zero ? "Hide Info":"More Info"}
                     </button>    
 
-                    {showDetails.four && (
+                    {showDetails.zero && (
                         <div className="text-sm text-secondary">
                             <ul className="list-disc list-inside text-sm text-secondary space-y-2 text-left">
                                 <li>
@@ -218,7 +219,7 @@ export const ExperienceSection = () => {
 
                     {showDetails.five && (
                         <div className="text-sm text-secondary">
-                            <p> Managed the organization’s budget and coordinated 10+ events, including workshops and guest speaker sessions, guiding members and connecting them with hospitality industry professionals. Created and managed social media content on Instagram and Facebook to share event information, industry insights, and professional opportunities, keeping members engaged and informed. 
+                            <p> Managed the organization's budget and coordinated 10+ events, including workshops and guest speaker sessions, guiding members and connecting them with hospitality industry professionals. Created and managed social media content on Instagram and Facebook to share event information, industry insights, and professional opportunities, keeping members engaged and informed. 
                             </p>
                         </div>
                     )}
