@@ -14,6 +14,14 @@ const projects = [
 {
     /* Project 2*/
     id: 2,
+    title: "Developed an end-to-end analytics platform that combines operational, customer behavior, and sales data to support business intelligence, forecasting, anomaly detection, and risk monitoring. Built using Python, PostgreSQL, SQL, and Power BI.",
+    image: "/projects/Picture3.png",
+    tags: ["Python", "PostgreSQL", "SQL", "Power BI"],
+    githubURL:"https://github.com/SharipovaRi/operations_analytics_and_risk_monitoring.git"
+},
+{
+    /* Project 3*/
+    id: 3,
     title: "MunchMatch",
     description: "Developed the backend for a personalized meal planning website that generates custom meal plans based on user-defined criteria. The project was built using Java (Spring Boot), H2 database, React, TypeScript, and other technologies.",
     image: "/projects/Picture1.png",

@@ -49,7 +49,8 @@ export const AboutSection = () => {
                                 <h4 className="font-semibold"> React </h4>  
                                 <h4 className="font-semibold"> Vite </h4>     
                                 <h4 className="font-semibold"> Node.js </h4>   
-                                <h4 className="font-semibold"> Git </h4>        
+                                <h4 className="font-semibold"> Git </h4>
+                                <h4 className="font-semibold"> Power BI </h4>        
                             </div>
                         </div>
                     </div>
