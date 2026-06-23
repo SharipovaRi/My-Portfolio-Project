@@ -44,7 +44,7 @@ export const ExperienceSection = () => {
                         </div>
                     
                         <button
-                        onClick={()=> toggleDetail('one')}
+                        onClick={()=> toggleDetail('ten')}
                         className="self-center px-2 py-1 text-xs font-medium border rounded-md bg-secondary text-secondary-foreground">
                         {showDetails.ten ? "Hide Info":"More Info"}
                         </button> 
