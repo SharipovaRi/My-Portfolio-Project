@@ -4,6 +4,16 @@ const projects = [
 {
     /* Project 1*/
     id: 1,
+    title: "AI Beauty Product Success Predictor",
+    description: "End-to-end machine learning platform that predicts beauty product launch success using historical Sephora data. Features SHAP explainability, a Gemini-powered AI assistant, FastAPI backend, Next.js frontend, and real-time deployment on Railway.",
+    image: "/projects/Picture0.png",
+    tags: ["Python", "Fast API", "SHAP", "Scikit-Learn", "Next.js", "TypeScript", " Gemini API ", "Railway"],
+    githubURL:"https://github.com/SharipovaRi/beauty_product_success_predictor",
+    websiteURL: "https://beauty-launch.up.railway.app/"
+},
+{
+    /* Project 2*/
+    id: 2,
     title: "E-Commerce Website Review Prediction System",
     description: "End-to-end Machine Learning system that predicts customer review ratings (1-5 ratings) and identifies dissatisfaction risk based on both review text and structured e-commerce data.",
     image: "/projects/Picture2.png",
@@ -12,8 +22,8 @@ const projects = [
     websiteURL: "https://e-commerce-review-prediction-system.up.railway.app/" 
 },
 {
-    /* Project 2*/
-    id: 2,
+    /* Project 3*/
+    id: 3,
     title: "Operations Analytics and Risk Monitoring Platform",
     description: "Developed an end-to-end analytics platform that combines operational, customer behavior, and sales data to support business intelligence, forecasting, anomaly detection, and risk monitoring. Built using Python, PostgreSQL, SQL, and Power BI.",
     image: "/projects/Picture3.png",
@@ -21,8 +31,8 @@ const projects = [
     githubURL:"https://github.com/SharipovaRi/operations_analytics_and_risk_monitoring.git"
 },
 {
-    /* Project 3*/
-    id: 3,
+    /* Project 4*/
+    id: 4,
     title: "MunchMatch",
     description: "Developed the backend for a personalized meal planning website that generates custom meal plans based on user-defined criteria. The project was built using Java (Spring Boot), H2 database, React, TypeScript, and other technologies.",
     image: "/projects/Picture1.png",
