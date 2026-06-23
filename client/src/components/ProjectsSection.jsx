@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "AI Beauty Product Success Predictor",
     description: "End-to-end machine learning platform that predicts beauty product launch success using historical Sephora data. Features SHAP explainability, a Gemini-powered AI assistant, FastAPI backend, Next.js frontend, and real-time deployment on Railway.",
-    image: "/projects/Picture0.png",
+    image: "/projects/Picture.png",
     tags: ["Python", "Fast API", "SHAP", "Scikit-Learn", "Next.js", "TypeScript", " Gemini API ", "Railway"],
     githubURL:"https://github.com/SharipovaRi/beauty_product_success_predictor",
     websiteURL: "https://beauty-launch.up.railway.app/"
