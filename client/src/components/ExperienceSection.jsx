@@ -16,6 +16,7 @@ export const ExperienceSection = () => {
         seven: false,
         eight: false,
         nine: false,
+        ten: false,
     });
 
     function toggleDetail(key) {
@@ -36,6 +37,43 @@ export const ExperienceSection = () => {
                 <div className="grid grid-cols-1 gap-3">
                 <h3 className="text-2xl font-bold"> Work Experience </h3>
                 
+                <div className="gradient-border p-6 card-hover">
+                    <div className="flex flex-col gap-4">
+                        <div className="text-muted-foreground font-bold">
+                            <h2>Research Support Assistant at University of South Florida</h2>  
+                        </div>
+                    
+                        <button
+                        onClick={()=> toggleDetail('one')}
+                        className="self-center px-2 py-1 text-xs font-medium border rounded-md bg-secondary text-secondary-foreground">
+                        {showDetails.one ? "Hide Info":"More Info"}
+                        </button> 
+
+                        {showDetails.one && (
+                            <div className="text-sm text-secondary">
+                                <ul className="list-disc list-inside text-sm text-secondary space-y-2 text-left">
+                                <li>
+                                    Manage subagreement budget and financial data within Bulls iResearch and FAST Financial systems, supporting sponsored research agreements.
+                                </li>
+
+                                <li>
+                                    Maintain research funding records and project documentation, ensuring data accuracy, compliance, and audit readiness.
+                                </li>
+
+                                <li>
+                                    Support sponsored research operations by coordinating communications among investigators, collaborators, and administrative stakeholders throughout the research project lifecycle.
+                                </li>
+
+                                <li>
+                                    Assist with the administration of externally funded research activities by tracking project information, maintaining documentation workflows, and supporting the timely processing of research agreements and related transactions.
+                                </li>
+                                </ul>
+                            </div>
+                        )}
+
+                    </div>
+                </div>
+
                 <div className="gradient-border p-6 card-hover">
                     <div className="flex flex-col gap-4">
                         <div className="text-muted-foreground font-bold">
