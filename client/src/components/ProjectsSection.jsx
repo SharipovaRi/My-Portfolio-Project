@@ -61,8 +61,12 @@ export const ProjectsSection = () =>{
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> 
             {projects.map((project, key) => (
                 <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col">
-                    <div className="h-48 overflow-hidden ">
-                        <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-500 scale-107  translate-x-2 group-hover:scale-115"/>
+                    <div className="h-64 bg-white overflow-hidden flex items-center justify-center">
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
                     </div>
                     <div className="p-4 flex flex-col flex-grow">
                         <div className="flex flex-wrap gap-2 mb-4">
