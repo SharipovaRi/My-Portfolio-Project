@@ -33,6 +33,15 @@ const projects = [
 {
     /* Project 4*/
     id: 4,
+    title: "Hotel Revenue & Guest Experience Analytics",
+    description:  "Built interactive Excel and Power BI dashboards to analyze hotel booking performance and guest review data. The project explores revenue trends, cancellations, customer segments, occupancy patterns, and guest satisfaction across 119K+ bookings and 515K+ reviews.",
+    image: "/projects/Picture5.png",
+    tags: ["Excel", "Power BI", "Power Query", "Pivot Tables"],
+    githubURL:"https://github.com/SharipovaRi/hotel_revenue_and_guest_experience_analytics.git"
+},
+{
+    /* Project 5*/
+    id: 5,
     title: "MunchMatch",
     description: "Developed the backend for a personalized meal planning website that generates custom meal plans based on user-defined criteria. The project was built using Java (Spring Boot), H2 database, React, TypeScript, and other technologies.",
     image: "/projects/Picture1.png",
