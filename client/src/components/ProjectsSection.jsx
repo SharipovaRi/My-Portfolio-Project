@@ -35,7 +35,7 @@ const projects = [
     id: 4,
     title: "Hotel Revenue & Guest Experience Analytics",
     description:  "Built interactive Excel and Power BI dashboards to analyze hotel booking performance and guest review data. The project explores revenue trends, cancellations, customer segments, occupancy patterns, and guest satisfaction across 119K+ bookings and 515K+ reviews.",
-    image: "/projects/Picture5.png",
+    image: "/projects/Picture6.png",
     tags: ["Excel", "Power BI", "Power Query", "Pivot Tables"],
     githubURL:"https://github.com/SharipovaRi/hotel_revenue_and_guest_experience_analytics.git"
 },
