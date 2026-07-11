@@ -26,7 +26,7 @@ const projects = [
     id: 3,
     title: "Operations Analytics and Risk Monitoring Platform",
     description: "Developed an end-to-end analytics platform that combines operational, customer behavior, and sales data to support business intelligence, forecasting, anomaly detection, and risk monitoring. Built using Python, PostgreSQL, SQL, and Power BI.",
-    image: "/projects/Picture3.png",
+    image: "/projects/Picture4.png",
     tags: ["Python", "PostgreSQL", "SQL", "Power BI"],
     githubURL:"https://github.com/SharipovaRi/operations_analytics_and_risk_monitoring.git"
 },
